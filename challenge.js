@@ -8,7 +8,7 @@ Suppose we get data from a web service about a certain game (below). In this cha
 
 1.Create one player array for each team (variables 'players1' and 'players2')
 
-2.The first player in any player is the goalkeeper and the others are field players. For Arbaz (team 1) create one variable ('gk') with the goalKeeper's name, and one array ('fieldPlayers') with all the remaining 10 field players.
+2.The first player in array player is the goalkeeper and the others are field players. For Arbaz (team 1) create one variable ('gk') with the goalKeeper's name, and one array ('fieldPlayers') with all the remaining 10 field players.
 
 3.Create an array 'allPlayers' containing all players of both team (22 players)
 
@@ -32,28 +32,28 @@ const game={
     team2:'Borrussia Dortmund',
     players:[
         [
-            'Neuer',
-            'Pavard',
-            'Martinez',
-            'Alaba',
-            'Davies',
-            'Goretzka',
-            'Coman',
-            'Muller',
-            'gnarby',
-            'Lewandowski',
+            'Arbaz',
+            'Souarbh',
+            'Ayush',
+            'Kartik',
+            'Deepak',
+            'Vikas',
+            'Ashfaq',
+            'Chayank',
+            'Vickey',
+            'Krish',
         ],
         [
-            'Burki',
-            'Schulz',
-            'Hummels',
-            'Hakimi',
-            'Weigl',
-            'Witsel',
-            'Hazard',
-            'Brandt',
-            'Sancho',
-            'Gotze',
+            'Laxman',
+            'Sonu',
+            'Mukul',
+            'Aman',
+            'Rahul',
+            'Irshad',
+            'Chirag',
+            'Prasoon',
+            'Jai',
+            'Jyot',
         ],
     ],
     score:'4:0',
@@ -65,22 +65,28 @@ const game={
         team2:6.5,
     },
 };
+
+//  1.
 const [players1,players2]=game.players;
 console.log(players1);
 console.log(players2);
 
-const [team1Goal, ...otherPlayers1]=[...players1];
-const [team2Goal,...otherPlayers2]=[...players2];
+const [team1Goal, ...fieldPlayers1]=[...players1];
+const [team2Goal, ...fieldPlayers2]=[...players2];
 console.log('Goal Keeper: ',team1Goal);
-console.log('OtherPlayers1: ',otherPlayers1);
+console.log('fieldPlayers1: ',fieldPlayers1);
 console.log('Goal Keeper: ',team2Goal);
-console.log('OtherPlayers2: ',otherPlayers2);
+console.log('fieldPlayers2: ',fieldPlayers2);
+const [...allPlayers]=[players1,players2];
+console.log('All players: ',allPlayers);
 
 const [...gk]=[team1Goal, team2Goal];
 console.log("Goal Keepers: ", gk);
 
 
 
+const [...players1Final]=[...players1,'Jamshed','Kulbir','Naman'];
+console.log('players1Final: ',players1Final);
 
 
 
