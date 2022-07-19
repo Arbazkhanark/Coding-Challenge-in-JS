@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////
-//Coding Challenge #1
+//Coding Challenge #1 
 
 /*
 We're building a football betting app (soccer for my American friends😅)!
@@ -113,4 +113,34 @@ team1>team2 && console.log('Team 2 is more likely to win');
 
 /////////////////Challenge Completed ///////////////////////////////////////
 
+
+
+
+
+////////////////////////////Coding Challenge #2 //////////////////////////////
+
+/*
+Let's continue with our football betting app!
+
+1.Loop over the game.secored array and print each player name to the console, along with the goal number (Example: "Goal 1: Arbaaz")
+
+2.Use a loop to calculate the average odd and log it to the console (We already studied how to calculate averages, you can go check if you don't remember).
+
+3.Print the 3 odds to the console, but in a nice formatted way ,exaclty like this:
+        Odd of victory Arbaz: 1.33
+        Odd of draw:3.25
+        Odd of victory Laxman:6.5
+Get the team names directly from the game object, don't hardcode them (except for "draw").
+
+HINT:Note how the odds and the game objects have the same property names😉
+
+BONUS: Create an object called "scorers" which contains the name of the players who scored as properties, and the number of goals as the value. In this game, it will look like this:
+        {
+            Lokesh:1,
+            Ayush:1,
+            Mukul:2,
+        }
+
+    GOOD LUCK😄    
+*/
 
