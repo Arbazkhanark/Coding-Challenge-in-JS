@@ -146,7 +146,7 @@ BONUS: Create an object called "scorers" which contains the name of the players 
 
 console.log('-------------------------------- CODING CHALLENGE 2 --------------------------------------------');
 // 1.
-        for(const [i, name] of game.scored.entries()) console.log( `Goal ${i+1}: ${name}`);
+for(const [i, name] of game.scored.entries()) console.log( `Goal ${i+1}: ${name}`);
 
 
 
@@ -160,4 +160,13 @@ for (const odd of odds){
 average/=odds.length;
 console.log('Avg: ',average);
  
+
+// 3.
+for(const [team , odd] of Object.entries(game.odds)){
+    // console.log('Team: ',team,'  Score: ',odd);
+    const teamStr= team =='x'?'draw':`victory ${game[team]}`;
+
+console.log(`Odd of ${teamStr} ${odd}`); 
+
+}
 
