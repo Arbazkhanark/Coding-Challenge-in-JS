@@ -186,7 +186,7 @@ console.log(`Odd of ${teamStr} ${odd}`);
 
 //////////////////////////// CODING CHALLENGE #3 ////////////////////////////////////
 /*
-1. Create an array 'events' of the different game evnts that happened (No Duplicates).
+1. Create an array 'events' of the different game events that happened (No Duplicates).
 
 2.After the game has finished, is was found that the Yellow card from minute 64 was unfair. So remove this event from the game events log.
 
@@ -213,3 +213,34 @@ const gameEvents=new Map([
     [92, 'Yellow card'],
 
 ]);
+
+
+// 1. Create an array 'events' of the different game events that happened (No Duplicates).
+
+const events= [...new Set(gameEvents.values())];
+console.log(events);
+
+
+// 2. After the game has finished, is was found that the Yellow card from minute 64 was unfair. So remove this event from the game events log.
+
+gameEvents.delete(64);
+console.log(gameEvents);
+
+
+// 3.
+console.log(
+    `An event happened, on average , every ${90/gameEvents.size} minutes`
+);
+
+const time =[...gameEvents.keys()].pop();
+console.log(
+    `An event happened, on average, every ${time/gameEvents.size} minutes`
+);
+
+
+
+// 4.
+for(const [min, event] of gameEvents){
+    const half =min <=45 ?'FIRST':'SECOND';
+    console.log(`[${half} HALF ${min}: ${event}]`);
+}
